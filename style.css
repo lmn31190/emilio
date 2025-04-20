@@ -7,15 +7,19 @@
 
 
 body {
-    font-family: "Montserrat", sans-serif;
     margin: 0;
     padding: 0;
+    font-family: "Montserrat", sans-serif;
     background-color: #FAFAFA;
 }
 
 
+.line, .other {
+    border: 1.5px solid #FECA07;
+}
+
 .line {
-    border: 2px solid #002984;
+    margin: 15px 0;
 }
 
 .uppercase {
@@ -55,6 +59,7 @@ main {
 
 .contact p {
     margin: 0;
+    font-weight: 600;
 }
 
 .contact .container div {
@@ -69,7 +74,7 @@ main {
 }
 
 .about p {
-    width: 55%;
+    width: 70%;
     text-align: justify;
     margin: auto;
 }
@@ -92,7 +97,7 @@ main {
     border: 1px solid black;
     border-radius: 50px;
     padding: 20px;
-    font-size: 1.5rem;
+    font-size: 100%;
 }
 
 .hoobies-container i:hover {
@@ -105,9 +110,90 @@ main {
 
 #right-part {
     flex: 1.5;
+
 }
 
-.right-size{
+#right-part h1,
+#right-part h2,
+#right-part h4,
+#right-part p {
+    margin: 0;
+}
+
+.right-size {
     width: 80%;
-    margin: auto;
+    margin: 50px auto;
+}
+
+#right-part header {
+    margin-bottom: 120px;
+}
+
+#right-part i {
+    color: #FECA07;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 500;
+
+}
+
+header h1 span {
+    color: #FECA07;
+}
+
+header p {
+    font-weight: 600;
+    margin-top: 8px !important;
+}
+
+.other {
+    width: 8%;
+    margin-top: 5px;
+}
+
+.right-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.formation, .experience{
+    margin-bottom: 60px;
+}
+
+
+
+.right-title i {
+    color: #FECA07;
+    font-size: 1.5rem;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.content .left {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex: 1;
+}
+
+.content .right {
+    flex: 1;
+}
+
+.recommandation div:nth-child(3){
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8rem;
+}
+
+.recommandation-content :not(p:nth-child(4)){
+ font-weight: 600;
 }
