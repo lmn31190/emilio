@@ -14,7 +14,7 @@ body {
 }
 
 
-.line, .other {
+.line {
     border: 1.5px solid #FECA07;
 }
 
@@ -28,19 +28,20 @@ body {
 
 .cv-wrapper {
     animation: fadeIn 1s ease-in-out both;
-  }
-  
-  @keyframes fadeIn {
+}
+
+@keyframes fadeIn {
     from {
-      opacity: 0;
-      transform: translateY(30px);
+        opacity: 0;
+        transform: translateY(30px);
     }
+
     to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
-  
+}
+
 
 
 main {
@@ -76,12 +77,12 @@ main {
 
 .profil-picture {
     transition: transform 0.4s ease;
-  }
-  
-  .profil-picture:hover {
+}
+
+.profil-picture:hover {
     transform: scale(1.05);
-  }
-  
+}
+
 
 .contact p {
     margin: 0;
@@ -133,7 +134,7 @@ main {
     cursor: pointer;
     font-size: 1.7rem;
 }
-  
+
 
 #right-part {
     flex: 1.5;
@@ -172,13 +173,22 @@ header h1 span {
 
 header p {
     font-weight: 600;
-    margin-top: 8px !important;
+    margin-top: 8px;
+    position: relative;
+    display: inline-block;
 }
 
-.other {
-    width: 8%;
-    margin-top: 5px;
+header p::after {
+    content: '';
+    display: block;
+    width: 25%;
+    height: 3px;
+    /* épaisseur de la barre */
+    background-color: #FBC02D;
+    margin-top: 8px;
 }
+
+
 
 .right-title {
     display: flex;
@@ -186,7 +196,8 @@ header p {
     gap: 20px;
 }
 
-.formation, .experience{
+.formation,
+.experience {
     margin-bottom: 60px;
 }
 
@@ -214,77 +225,79 @@ header p {
     flex: 1;
 }
 
-.recommandation div:nth-child(3){
+.recommandation div:nth-child(3) {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 8rem;
 }
 
-.recommandation-content :not(p:nth-child(4)){
- font-weight: 600;
+.recommandation-content :not(p:nth-child(4)) {
+    font-weight: 600;
 }
 
 @media screen and (max-width: 768px) {
     main {
-      flex-direction: column;
+        flex-direction: column;
     }
-  
+
     #left-part,
     #right-part {
-      flex: unset;
-      width: 100%;
+        flex: unset;
+        width: 100%;
     }
-  
+
     .profil-picture {
-      width: 150px;
-      margin: 20px auto 0;
-      display: block;
+        width: 150px;
+        margin: 20px auto 0;
+        display: block;
     }
-  
+
     .about p {
-      width: 90%;
+        width: 90%;
     }
-  
+
     .right-size {
-      width: 90%;
-      margin: 30px auto;
+        width: 90%;
+        margin: 30px auto;
     }
-  
+
     .content {
-      flex-direction: column;
-      gap: 10px;
+        flex-direction: column;
+        gap: 10px;
     }
-  
+
     .content .left,
     .content .right {
-      width: 100%;
+        width: 100%;
     }
-  
+
     .recommandation div:nth-child(3) {
-      gap: 30px;
+        gap: 30px;
     }
-  
+
     header h1 {
-      font-size: 1.7rem;
-      text-align: center;
+        font-size: 1.7rem;
+        text-align: center;
     }
-  
+
     header p {
-      text-align: center;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
     }
-    .hoobies{
+
+    .hoobies {
         position: unset;
     }
-  
+
     .hoobies-container {
-      flex-wrap: wrap;
-      gap: 10px;
+        flex-wrap: wrap;
+        gap: 10px;
     }
-  
+
     .hoobies-container i {
-      padding: 15px;
-      font-size: 1.2rem;
+        padding: 15px;
+        font-size: 1.2rem;
     }
-  }
-  
+}
